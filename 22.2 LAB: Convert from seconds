@@ -1,0 +1,33 @@
+
+
+People find it easier to read time in hours, minutes, and seconds rather than just seconds.
+
+Write a program that reads in seconds as input, and outputs the time in hours, minutes, and seconds.
+
+Ex: If the input is:
+
+4000
+
+the output is:
+
+Hours: 1
+Minutes: 6
+Seconds: 40
+
+
+
+''' Type your code here '''
+seconds = int(input())
+
+hours_total = (seconds // 60) // 60
+minutes = (seconds % 3600) // 60 
+seconds_total = seconds % 60
+
+
+
+
+
+print(f'Hours: {hours_total}')
+print(f'Minutes: {minutes}')
+print(f'Seconds: {seconds_total}')
+
