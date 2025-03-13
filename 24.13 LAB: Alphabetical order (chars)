@@ -1,0 +1,28 @@
+
+
+Write a program that takes in three lowercase characters and outputs the characters in alphabetical order.
+
+Hint: Ordering three characters takes six permutations.
+
+Ex: If the input is:
+
+c
+a
+b
+
+the output is:
+
+a b c
+
+
+
+
+
+
+# Type your code here.
+a = input()
+b = input()
+c = input()
+lists = [a, b, c]
+lists = sorted(lists)
+print(*lists)
