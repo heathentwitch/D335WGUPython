@@ -1,0 +1,31 @@
+
+
+Write a program that takes three integers as input: low, high, and x. The program then outputs the number of multiples of x between low and high inclusive.
+
+Ex: If the input is:
+
+1
+10
+2
+
+the output is:
+
+5
+
+Hint: Use the % operator to determine if a number is a multiple of x. Use a for loop to test each number between low and high.
+
+
+
+
+
+low = int(input())
+high = int(input())
+x = int(input())
+count = 0
+for n in range(low, high + 1):
+    if n % x == 0:
+        count += 1
+            
+        
+print(count)
+        
