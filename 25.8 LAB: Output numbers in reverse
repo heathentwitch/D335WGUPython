@@ -1,0 +1,40 @@
+
+
+Write a program that reads a list of integers, one per line, until an * is read, then outputs those integers in reverse. For simplicity in coding output, follow each integer, including the last one, by a comma.
+
+Note: Use a while loop to output the integers. DO NOT use reverse() or reversed().
+
+Ex: If the input is:
+
+2
+4
+6
+8
+10
+*
+
+the output is:
+
+10,8,6,4,2,
+
+
+
+
+''' Type your code here. '''
+num = input()
+number = []
+end = '*'
+
+while num != end:
+    number.append(int(num))
+    num = input()
+
+
+index = len(number) - 1
+
+while index >= 0:
+    print(number[index], end=',')
+    index -= 1 
+        
+print()
+#the last print statement is there because the program expects after last number to got to new line. did not know that until went to grade. 
