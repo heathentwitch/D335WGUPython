@@ -1,0 +1,24 @@
+
+
+Given a floating-point number as input, output the square root of the given number.
+
+Hint: Use the appropriate function from the math module to perform the operation.
+
+Ex: If the input is:
+
+9.0
+
+the output is:
+
+Sqrt: 3.0
+
+
+
+
+import math
+
+''' Type your code here. '''
+user_input = float(input())
+sqroot = math.sqrt(user_input)
+print(f'Sqrt: {sqroot}')
+
