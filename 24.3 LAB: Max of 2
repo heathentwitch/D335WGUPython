@@ -1,0 +1,21 @@
+
+
+Write a program that takes in two integers and outputs the larger value. If the two integers are the same, output the integers' value.
+
+Ex: If the input is:
+
+4 
+2
+
+the output is:
+
+4
+
+
+
+''' Type your code here. '''
+num1 = int(input())
+num2 = int(input())
+max_num = max(num1, num2)
+
+print(max_num)
