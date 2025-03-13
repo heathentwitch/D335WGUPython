@@ -1,0 +1,23 @@
+
+
+Write a program that takes in two strings and outputs the longest string. If they are the same length then output the second string.
+
+Ex. If the input is:
+
+almond
+pistachio
+
+the output is:
+
+pistachio
+
+
+
+
+''' Type your code here. '''
+user_input1 = input()
+user_input2 = input()
+
+max_length = max(user_input1, user_input2)
+
+print(max_length)
