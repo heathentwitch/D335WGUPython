@@ -1,0 +1,33 @@
+
+
+Write a program that inputs an integer (0 - 9999) and outputs the number of digits.
+
+Ex: If the input is:
+
+7493
+
+the output is:
+
+4 digits
+
+Ex: If the input is:
+
+7
+
+the output is:
+
+1 digit
+
+
+
+# Type your code here.
+digit = int(input())
+
+digit_length = len(str(digit))
+
+if digit in range(0, 9):
+    print(f'{digit_length} digit')   
+else:
+    print(f'{digit_length} digits')
+
+
