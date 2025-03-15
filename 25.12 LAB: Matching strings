@@ -1,0 +1,64 @@
+
+
+Write a program that compares two strings given as input. Output the number of characters that match in each string position. The output should use the correct verb (match vs matches) according to the character count.
+
+Ex: If the input is:
+
+crash
+crush
+
+the output is:
+
+4 characters match
+
+Ex: If the input is:
+
+cat
+catnip
+
+the output is:
+
+3 characters match
+
+Ex: If the input is:
+
+mall
+saw
+
+the output is:
+
+1 character matches
+
+Ex: If the input is:
+
+apple
+orange
+
+the output is:
+
+0 characters match
+
+
+
+# Type your code here.
+
+word1 = input()
+word2 = input()
+
+
+# need to make sure words match count wise 
+min_length = min(len(word1), len(word2))
+
+#initialize the counter
+match = 0
+for i in range(min_length):
+    if word1[i] == word2[i]: #word1[i] == word2[i] compares each letter at each position
+        match +=1
+
+
+if match > 1:
+    print(f'{match} characters match')
+if match == 1:
+    print(f'{match} character matches')
+if match == 0:
+    print(f'{match} characters match')
