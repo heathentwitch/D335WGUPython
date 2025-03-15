@@ -1,0 +1,46 @@
+
+
+Write a function count_evens() that has four integer parameters, and returns the count of parameters where the value is an even number (i.e. evenly divisible by 2).
+
+Ex: If the four parameters are:
+
+1
+22
+11
+40
+
+then the returned count will be:
+
+2
+
+Hint: Use the modulo operator % to determine if each number is even or odd.
+
+Your program must define the function:
+count_evens(num1, num2, num3, num4)
+
+
+
+
+
+# Define your function here
+def count_evens(num1, num2, num3, num4):
+    count = 0
+# % 2 == 0 determines if it is even, count += 1 counts each time there is an even
+    if num1 % 2 == 0:
+        count += 1
+    if num2 % 2 == 0:
+        count += 1
+    if num3 % 2 == 0:
+        count += 1
+    if num4 % 2 == 0:
+        count += 1
+    return count
+
+if __name__ == '__main__':
+    num1 = int(input())
+    num2 = int(input())
+    num3 = int(input())
+    num4 = int(input())
+    
+    result = count_evens(num1, num2, num3, num4)
+    print('Total evens:', result)
