@@ -32,12 +32,12 @@ def ints_less_than_or_equal_to_threshold(user_values, upper_threshold) - create 
 
 
 # Define your functions here
-def get_user_values():
+def get_user_values(): #gets user_values range then creates list to end of range with upper_threshold being what to filter list by
     num_values = int(input())
     user_values = [int(input()) for _ in range(num_values)]
     upper_threshold = int(input())
     return user_values, upper_threshold
-def ints_less_than_or_equal_to_threshold(user_values, upper_threshold):
+def ints_less_than_or_equal_to_threshold(user_values, upper_threshold): # determines if numbers in list are less than upper threshold
     return [value for value in user_values if value <= upper_threshold]
 
 if __name__ == '__main__':
