@@ -1,0 +1,22 @@
+
+
+Write a program that outputs a right triangle of asterisks given the height as input. Each line ends with a blank space.
+
+Ex: If the input is:
+
+3
+
+the output is:
+
+* * * 
+* * 
+* 
+
+
+
+
+# Type your code here.
+number = int(input())
+char = '*'
+for i in range(number, 0, -1): #the range is input number down to 0 -1 is decreasing count at each iteration. 
+    print((char + ' ') * i)
