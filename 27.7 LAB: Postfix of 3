@@ -1,0 +1,20 @@
+
+
+The postfix of 3 is the last 3 characters of a string. Given a string input, output the last three characters of that string. Assume the string will always have at least three characters.
+
+Ex: If the input is:
+
+chicken
+
+the output is:
+
+Postfix: ken
+
+
+
+
+
+''' Type your code here. '''
+user_input = input()
+post = int(len(user_input))
+print(f'Postfix: {user_input[-3:]}') #-3 index with blank after : gets last 3 of string
