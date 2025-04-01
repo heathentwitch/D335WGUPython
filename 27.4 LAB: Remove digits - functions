@@ -1,0 +1,34 @@
+
+
+Write a program that removes all digits from the given input.
+
+Ex: If the input is:
+
+1244Crescent
+
+the output is:
+
+Crescent
+
+The program must define and call the following function that takes a string as parameter and returns the string without any digits.
+
+def remove_digits(user_string)
+
+
+
+
+
+
+
+
+def remove_digits(user_string):
+    """Removes all digits from the given string."""
+    result = ""  # Initialize an empty string
+    for char in user_string:  # Loop through each character
+        if not char.isdigit():  # Check if the character is not a digit
+            result += char  # Add non-digit characters to result
+    return result  # Return the modified string
+
+if __name__ == "__main__":
+    user_input = input().strip()  # Prompt user for input
+    print(remove_digits(user_input))
