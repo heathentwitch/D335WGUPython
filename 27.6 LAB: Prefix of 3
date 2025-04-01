@@ -1,0 +1,22 @@
+
+
+The prefix of 3 is the first 3 characters of a string. Given a string input, output the first three characters of that string. Assume the string will always have at least three characters.
+
+Ex: If the input is:
+
+chicken
+
+the output is:
+
+Prefix: chi
+
+
+
+
+
+
+''' Type your code here. '''
+user_input = input()
+drei = int(len(user_input))
+
+print(f'Prefix: {user_input[0:3]}')
