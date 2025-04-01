@@ -1,0 +1,19 @@
+
+
+The midfix of 3 is the middle 3 characters of a string. Given a string input, output the middle three characters of that string. Assume the word length is always odd and at least three characters.
+
+Ex: If the input is:
+
+xxxtoyxxx
+
+the output is:
+
+Midfix: toy
+
+
+
+
+user_string = input()
+
+index = int((len(user_string)/2)-1)
+print(f'Midfix: {user_string[index:index+3]}')
