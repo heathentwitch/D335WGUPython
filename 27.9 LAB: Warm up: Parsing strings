@@ -1,0 +1,88 @@
+
+
+(1) Prompt the user for a string that contains two strings separated by a comma. (1 pt)
+
+    Examples of strings that can be accepted:
+        Jill, Allen
+        Jill , Allen
+        Jill,Allen
+
+Ex:
+
+Enter input string:
+Jill, Allen
+
+
+(2) Report an error if the input string does not contain a comma. Continue to prompt until a valid string is entered. Note: If the input contains a comma, then assume that the input also contains two strings. (2 pts)
+
+Ex:
+
+Enter input string:
+Jill Allen
+Error: No comma in string.
+
+Enter input string: Jill, Allen
+
+
+(3) Using string splitting, extract the two words from the input string and then remove any spaces. Output the two words. (2 pts)
+
+Ex:
+
+Enter input string:
+Jill, Allen
+First word: Jill
+Second word: Allen
+
+
+(4) Using a loop, extend the program to handle multiple lines of input. Continue until the user enters q to quit. (2 pts)
+
+Ex:
+
+Enter input string:
+Jill, Allen
+First word: Jill
+Second word: Allen
+
+Enter input string:
+Golden , Monkey
+First word: Golden
+Second word: Monkey
+
+Enter input string:
+Washington,DC
+First word: Washington
+Second word: DC
+
+Enter input string:
+q
+
+
+
+
+
+
+
+def extract_words(input_string):
+    # Split the input string by a comma and remove any leading/trailing spaces
+    words = [word.strip() for word in input_string.split(",")]
+    return words
+
+
+while True:        
+    user_input = input("Enter input string:\n")
+    
+    if user_input == 'q':
+        break
+        
+    if ',' not in user_input:
+        print("Error: No comma in string.\n")
+    else:
+        words = extract_words(user_input)
+        if len(words) != 2:
+            print("Error: Invalid input format. Please enter two words separated by a comma.\n")
+        else:
+            print(f"First word: {words[0]}")
+            print(f"Second word: {words[1]}\n")
+
+
+
