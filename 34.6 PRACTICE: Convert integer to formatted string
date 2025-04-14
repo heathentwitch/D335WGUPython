@@ -1,0 +1,50 @@
+
+Instructions:
+
+Create a Python solution to the following task. Ensure that the solution produces output in exactly the same format shown in the sample(s) below, including capitalization and whitespace.
+Task:
+
+Create a solution that accepts an integer input representing a 9-digit unformatted student identification number. Output the identification number as a string with no spaces.
+
+The solution output should be in the format
+
+111-22-3333
+
+Sample Input/Output:
+
+If the input is
+
+154175430
+
+then the expected output is
+
+154-17-5430
+
+
+
+
+
+#hint: modulo (%) and floored division (//) may be used
+#solution accepts a 9-digit integer representing an unformatted student identification number (i.e.,"5417543010")
+#solution outputs formatted student identification number as a string (i.e.,"541-75-3010")
+
+student_id = int(input())
+first_three = student_id // 10 ** 6
+middle = (student_id % 10 ** 6) // 10 ** 4
+last_four = student_id % 10 ** 4
+print(f'{first_three}-{middle}-{last_four}')
+
+
+
+
+
+differnet way 
+
+
+
+student_id = input()
+def student():
+    num = student_id
+    return f'{num[0:3]}-{num[3:5]}-{num[-4:]}'
+
+print(student())
