@@ -1,0 +1,34 @@
+
+
+Write a program that finds word differences between two sentences. The input begins with the first sentence and the following input line is the second sentence. Assume that the two sentences have the same number of words.
+
+The program displays word pairs that differ between the two sentences. One pair is displayed per line.
+
+Ex: If the input is:
+
+Smaller cars get better gas mileage
+Tiny cars get great fuel economy
+
+then the output is:
+
+Smaller Tiny
+better great
+gas fuel
+mileage economy
+
+Hint: Store each input line into a list of strings.
+
+
+
+
+
+''' Type your code here. '''
+phrase1 = input()
+phrase2 = input()
+
+words1 = phrase1.split()
+words2 = phrase2.split()
+
+for w1, w2 in zip(words1, words2):
+    if w1 != w2:
+        print(w1, w2)
