@@ -1,0 +1,34 @@
+
+Instructor note:
+
+The skills required for this lab are covered in Chapter 10. Strings. To successfully complete this lab, review the content of Chapter 10, as well as the preceding chapters, and complete the Challenge Activities associated.
+
+A palindrome is a word or a phrase that is the same when read both forward and backward. Examples are: "bob," "sees," or "never odd or even" (ignoring spaces). Write a program whose input is a word or phrase, and that outputs whether the input is a palindrome.
+
+Ex: If the input is:
+
+bob
+
+the output is:
+
+bob is a palindrome
+
+Ex: If the input is:
+
+bobby
+
+the output is:
+
+bobby is not a palindrome
+
+Hint: Start by removing spaces. Then check if a string is equivalent to it's reverse.
+
+
+
+''' Type your code here. '''
+user_string = input()
+rev = (user_string.lower().replace(' ', ''))[::-1]
+if (user_string.lower().replace(' ','') == rev):
+    print(f'{user_string} is a palindrome')
+else:
+    print(f'{user_string} is not a palindrome')
