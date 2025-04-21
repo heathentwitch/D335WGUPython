@@ -1,0 +1,72 @@
+
+
+Write a program with total change amount as an integer input, and output the change using the fewest coins, one coin type per line. The coin types are Dollars, Quarters, Dimes, Nickels, and Pennies. Use singular and plural coin names as appropriate, like 1 Penny vs. 2 Pennies.
+
+Ex: If the input is:
+
+0 
+
+(or less than 0), the output is:
+
+No change 
+
+Ex: If the input is:
+
+45
+
+the output is:
+
+1 Quarter
+2 Dimes 
+
+
+
+
+
+
+
+
+
+
+def exact_change(cents):
+    num_dollars = cents // 100
+    cents %= 100 
+    num_quarters = cents // 25
+    cents %= 25
+    num_dimes = cents // 10
+    cents %= 10
+    num_nickels = cents // 5
+    cents %= 5
+    num_pennies = cents 
+    return num_dollars, num_quarters, num_dimes, num_nickels, num_pennies
+    
+cents = int(input())  
+num_dollars, num_quarters, num_dimes, num_nickels, num_pennies = exact_change(cents)
+if cents == 0:
+    print('No change')
+else: 
+    if num_dollars > 0:
+        if num_dollars == 1:
+            print(f'{num_dollars} Dollar')
+        else:
+            print(f'{num_dollars} Dollars')
+    if num_quarters > 0:
+        if num_quarters == 1:
+            print(f'{num_quarters} Quarter')
+        else:
+            print(f'{num_quarters} Quarters')
+    if num_dimes > 0:
+        if num_dimes == 1:
+            print(f'{num_dimes} Dime')
+        else:
+            print(f'{num_dimes} Dimes')
+    if num_nickels > 0:
+        if num_nickels == 1:
+            print(f'{num_nickels} Nickel')
+        else:
+            print(f'{num_nickels} Nickels')
+    if num_pennies > 0:
+        if num_pennies == 1:
+            print(f'{num_pennies} Penny')
+        else:
+            print(f'{num_pennies} Pennies')
